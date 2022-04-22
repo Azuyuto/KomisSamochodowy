@@ -22,6 +22,10 @@ namespace KomisSamochodowy
             foreach (var car in SavedCarUtils.GetCars())
             {
                 StringBuilder str = new StringBuilder("");
+                if (!String.IsNullOrEmpty(car.UserData))
+                {
+                    str.Append(String.Format(@"({0}) ", car.UserData));
+                }
                 str.Append(String.Format(@"{0} {1}, {2} {3}", car.Brand, car.CarModel, car.Engine, car.Color));
                 foreach(var add in car.Additionals)
                 {
@@ -58,6 +62,7 @@ namespace KomisSamochodowy
             {
                 carCalendar.SelectionEnd = car.EndDate.Value;
             }
+            userDataTextBox.Text = car.UserData;
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
@@ -65,6 +70,7 @@ namespace KomisSamochodowy
             var car = SavedCarUtils.GetByID(((ListBoxItem)carListBox.SelectedItem).ID);
             car.StartDate = carCalendar.SelectionStart;
             car.EndDate = carCalendar.SelectionEnd;
+            car.UserData = userDataTextBox.Text;
             SavedCarUtils.UpdateSavedCar(car);
             using (SuccessForm form = new SuccessForm())
             {

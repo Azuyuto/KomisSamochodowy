@@ -53,6 +53,7 @@ namespace KomisSamochodowy.Model
             var car = cars.Where(a => a.ID == savedCar.ID).FirstOrDefault();
             car.StartDate = savedCar.StartDate;
             car.EndDate = savedCar.EndDate;
+            car.UserData = savedCar.UserData;
             File.WriteAllText(GetFilePath(), JsonConvert.SerializeObject(cars));
         }
     }

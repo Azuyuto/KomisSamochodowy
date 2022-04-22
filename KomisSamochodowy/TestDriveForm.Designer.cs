@@ -29,6 +29,7 @@ namespace KomisSamochodowy
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.carListBox = new System.Windows.Forms.ListBox();
             this.separatePanel = new System.Windows.Forms.Panel();
@@ -36,12 +37,17 @@ namespace KomisSamochodowy
             this.titleLabel = new System.Windows.Forms.Label();
             this.secondSeparatePanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.saveBtn = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.carCalendar = new System.Windows.Forms.MonthCalendar();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.userDataTextBox = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
             this.panelHedaer.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -118,15 +124,6 @@ namespace KomisSamochodowy
             this.panel2.Size = new System.Drawing.Size(540, 80);
             this.panel2.TabIndex = 6;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(360, 360);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(540, 10);
-            this.panel3.TabIndex = 7;
-            // 
             // saveBtn
             // 
             this.saveBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -143,6 +140,15 @@ namespace KomisSamochodowy
             this.saveBtn.UseVisualStyleBackColor = false;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(360, 360);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(540, 10);
+            this.panel3.TabIndex = 7;
+            // 
             // carCalendar
             // 
             this.carCalendar.CalendarDimensions = new System.Drawing.Size(2, 2);
@@ -152,12 +158,54 @@ namespace KomisSamochodowy
             this.carCalendar.Name = "carCalendar";
             this.carCalendar.TabIndex = 8;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.userDataTextBox, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(360, 311);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(540, 49);
+            this.tableLayoutPanel1.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Font = new System.Drawing.Font("Calibri", 15F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(17)))), ((int)(((byte)(60)))));
+            this.label1.Location = new System.Drawing.Point(20, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(230, 40);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Dane użytkownika:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // userDataTextBox
+            // 
+            this.userDataTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.userDataTextBox.Font = new System.Drawing.Font("Calibri", 15F);
+            this.userDataTextBox.Location = new System.Drawing.Point(274, 8);
+            this.userDataTextBox.Name = "userDataTextBox";
+            this.userDataTextBox.Size = new System.Drawing.Size(262, 32);
+            this.userDataTextBox.TabIndex = 4;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // TestDriveForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(900, 450);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.carCalendar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -168,6 +216,8 @@ namespace KomisSamochodowy
             this.panel1.ResumeLayout(false);
             this.panelHedaer.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -183,5 +233,9 @@ namespace KomisSamochodowy
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.MonthCalendar carCalendar;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.TextBox userDataTextBox;
     }
 }

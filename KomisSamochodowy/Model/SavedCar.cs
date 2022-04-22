@@ -16,5 +16,6 @@ namespace KomisSamochodowy.Model
         public List<string> Additionals { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
+        public string UserData { get; set; }
     }
 }
